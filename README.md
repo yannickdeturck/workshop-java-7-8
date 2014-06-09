@@ -1,4 +1,2 @@
-workshop-java7-8
-================
-
-Contains the sources of the Java 7 &amp; Java 8 Workshop.
+# Worshop Java 7 & Java 8
+This repository contains the sources of the examples used during the Java 7 & Java 8 workshop.
