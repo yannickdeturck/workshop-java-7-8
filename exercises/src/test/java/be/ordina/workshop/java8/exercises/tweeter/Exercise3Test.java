@@ -53,15 +53,15 @@ public class Exercise3Test {
     public void getSortedTweets() throws Exception {
         List<Tweet> sortedTweets = Exercise3.getSortedTweets((t1, t2) -> t1.getTweetId().compareTo(t2.getTweetId()));
         Assert.assertEquals(11L, sortedTweets.get(0).getTweetId().longValue());
-        Assert.assertEquals(10L, sortedTweets.get(0).getTweetId().longValue());
-        Assert.assertEquals(9L, sortedTweets.get(0).getTweetId().longValue());
-        Assert.assertEquals(8L, sortedTweets.get(0).getTweetId().longValue());
-        Assert.assertEquals(7L, sortedTweets.get(0).getTweetId().longValue());
-        Assert.assertEquals(6L, sortedTweets.get(0).getTweetId().longValue());
-        Assert.assertEquals(5L, sortedTweets.get(0).getTweetId().longValue());
-        Assert.assertEquals(4L, sortedTweets.get(0).getTweetId().longValue());
-        Assert.assertEquals(3L, sortedTweets.get(0).getTweetId().longValue());
-        Assert.assertEquals(2L, sortedTweets.get(0).getTweetId().longValue());
-        Assert.assertEquals(1L, sortedTweets.get(0).getTweetId().longValue());
+        Assert.assertEquals(10L, sortedTweets.get(1).getTweetId().longValue());
+        Assert.assertEquals(9L, sortedTweets.get(2).getTweetId().longValue());
+        Assert.assertEquals(8L, sortedTweets.get(3).getTweetId().longValue());
+        Assert.assertEquals(7L, sortedTweets.get(4).getTweetId().longValue());
+        Assert.assertEquals(6L, sortedTweets.get(5).getTweetId().longValue());
+        Assert.assertEquals(5L, sortedTweets.get(6).getTweetId().longValue());
+        Assert.assertEquals(4L, sortedTweets.get(7).getTweetId().longValue());
+        Assert.assertEquals(3L, sortedTweets.get(8).getTweetId().longValue());
+        Assert.assertEquals(2L, sortedTweets.get(9).getTweetId().longValue());
+        Assert.assertEquals(1L, sortedTweets.get(10).getTweetId().longValue());
     }
 }
