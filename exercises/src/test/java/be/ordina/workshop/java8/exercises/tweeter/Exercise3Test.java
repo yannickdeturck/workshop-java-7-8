@@ -11,6 +11,9 @@ import org.junit.runners.JUnit4;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author Yannick De Turck
+ */
 @RunWith(JUnit4.class)
 public class Exercise3Test {
     @Test

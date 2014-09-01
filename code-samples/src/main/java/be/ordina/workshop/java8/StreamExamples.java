@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+/**
+ * @author Yannick De Turck
+ */
 public class StreamExamples {
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(1, 3, 5, 7, 13, 17, 23);

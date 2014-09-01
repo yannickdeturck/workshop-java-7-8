@@ -8,6 +8,9 @@ import java.io.File;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveAction;
 
+/**
+ * @author Yannick De Turck
+ */
 public class ForkBlur extends RecursiveAction {
 
     private int[] mSource;

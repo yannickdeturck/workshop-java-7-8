@@ -3,6 +3,9 @@ package be.ordina.workshop.java8;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author Yannick De Turck
+ */
 public class MapExamples {
     public static void main(String[] args) {
         // putIfAbsent

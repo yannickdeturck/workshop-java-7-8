@@ -6,6 +6,9 @@ import java.util.List;
 
 /**
  * Basic exercises on the new features in Java 8.
+ *
+ * * @author Yannick De Turck
+ *
  */
 public class Exercise1 {
     private static List<String> fruits = Arrays.asList("apple", "pear", "banana", "orange", "pineapple", "lemon");

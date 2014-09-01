@@ -2,6 +2,9 @@ package be.ordina.workshop.java7;
 
 import java.util.Scanner;
 
+/**
+ * @author Yannick De Turck
+ */
 public class SwitchString {
     public static final String MORNING = "morning";
     public static final String NOON = "noon";

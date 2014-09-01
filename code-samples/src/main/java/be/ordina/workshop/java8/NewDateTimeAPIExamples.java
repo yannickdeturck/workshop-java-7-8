@@ -7,6 +7,9 @@ import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.Locale;
 
+/**
+ * @author Yannick De Turck
+ */
 public class NewDateTimeAPIExamples {
     public static void main(String[] args) {
         // Working with time zones

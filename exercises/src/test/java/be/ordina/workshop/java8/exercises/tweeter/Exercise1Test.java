@@ -8,6 +8,9 @@ import org.junit.runners.JUnit4;
 
 import java.util.List;
 
+/**
+ * @author Yannick De Turck
+ */
 @RunWith(JUnit4.class)
 public class Exercise1Test {
     @Test

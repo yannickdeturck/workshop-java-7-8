@@ -1,5 +1,8 @@
 package be.ordina.workshop.java7;
 
+/**
+ * @author Yannick De Turck
+ */
 public class NumericLiterals {
     public static void main(String[] args) {
         long creditCardNumber = 1234_5678_9012_3456L;

@@ -7,6 +7,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * @author Yannick De Turck
+ */
 public class DiamondOperator {
 
     public static void main(String[] args) {

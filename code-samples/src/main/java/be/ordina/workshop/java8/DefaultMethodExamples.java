@@ -1,5 +1,8 @@
 package be.ordina.workshop.java8;
 
+/**
+ * @author Yannick De Turck
+ */
 public class DefaultMethodExamples { // aka Extension Methods
 
     public static void main(String[] args) {

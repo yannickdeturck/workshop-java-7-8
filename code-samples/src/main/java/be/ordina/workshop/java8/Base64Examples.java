@@ -4,6 +4,9 @@ import javax.xml.bind.DatatypeConverter;
 import java.util.Base64;
 import java.util.UUID;
 
+/**
+ * @author Yannick De Turck
+ */
 public class Base64Examples {
     public static void main(String[] args) throws Exception {
         // Java 1.6 API from JAXB

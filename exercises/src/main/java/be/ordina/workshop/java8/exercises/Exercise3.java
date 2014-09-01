@@ -12,6 +12,8 @@ import java.util.Map;
 
 /**
  * Exercises based on Lambdas, Streams and the TweetService.
+ *
+ * @author Yannick De Turck
  */
 public class Exercise3 {
     private static TweetService tweetService = TweetService.getInstance();

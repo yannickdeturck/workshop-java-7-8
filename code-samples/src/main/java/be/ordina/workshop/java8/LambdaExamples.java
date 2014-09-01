@@ -8,6 +8,9 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * @author Yannick De Turck
+ */
 public class LambdaExamples {
     public static void main(String[] args) {
         printList(Arrays.asList("a", "b", "c"));
