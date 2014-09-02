@@ -3,6 +3,9 @@ package be.ordina.workshop.java7;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+/**
+ * @author Yannick De Turck
+ */
 public class TryWith {
 
     public TryWith() throws IOException {

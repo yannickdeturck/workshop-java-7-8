@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+/**
+ * @author Yannick De Turck
+ */
 public class TryWith2 {
 
     public static void main(String[] args) {

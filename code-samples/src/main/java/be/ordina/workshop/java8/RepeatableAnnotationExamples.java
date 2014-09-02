@@ -4,6 +4,9 @@ import java.lang.annotation.Repeatable;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
+/**
+ * @author Yannick De Turck
+ */
 public class RepeatableAnnotationExamples {
 
     @Retention(RetentionPolicy.RUNTIME)

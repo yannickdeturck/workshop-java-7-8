@@ -2,6 +2,9 @@ package be.ordina.workshop.java8.exercises.tweeter.model;
 
 import java.time.LocalDateTime;
 
+/**
+ * @author Yannick De Turck
+ */
 public class Tweet {
     private Long tweetId;
     private String username;

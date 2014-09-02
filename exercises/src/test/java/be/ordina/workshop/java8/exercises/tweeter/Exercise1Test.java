@@ -8,19 +8,22 @@ import org.junit.runners.JUnit4;
 
 import java.util.List;
 
+/**
+ * @author Yannick De Turck
+ */
 @RunWith(JUnit4.class)
 public class Exercise1Test {
     @Test
-    public void testFilterUnevenCharacterSize() throws Exception {
+    public void testFilterUnevenCharacterSize() {
         List<String> unevenFruits = Exercise1.filterEvenCharacterSize();
-        Assert.assertEquals(3, unevenFruits);
+        Assert.assertEquals(3, unevenFruits.size());
         Assert.assertTrue(unevenFruits.contains("pear"));
         Assert.assertTrue(unevenFruits.contains("banana"));
         Assert.assertTrue(unevenFruits.contains("orange"));
     }
 
     @Test
-    public void testSortAlphabetically() throws Exception {
+    public void testSortAlphabetically() {
         List<String> sortedFruits = Exercise1.sortAlphabetically();
         Assert.assertEquals("apple", sortedFruits.get(0));
         Assert.assertEquals("banana", sortedFruits.get(1));
@@ -31,7 +34,7 @@ public class Exercise1Test {
     }
 
     @Test
-    public void testMapThreeFirstCharacters() throws Exception {
+    public void testMapThreeFirstCharacters() {
         List<String> fruits = Exercise1.mapThreeFirstCharacters();
         Assert.assertEquals("app", fruits.get(0));
         Assert.assertEquals("pea", fruits.get(1));
@@ -42,7 +45,7 @@ public class Exercise1Test {
     }
 
     @Test
-    public void testFruitWithSizeExists() throws Exception {
+    public void testFruitWithSizeExists() {
         Assert.assertTrue(Exercise1.fruitWithSizeExists(5));
         Assert.assertTrue(Exercise1.fruitWithSizeExists(9));
         Assert.assertFalse(Exercise1.fruitWithSizeExists(2));
@@ -50,7 +53,7 @@ public class Exercise1Test {
     }
 
     @Test
-    public void testToSingleString() throws Exception {
+    public void testToSingleString() {
         Assert.assertEquals("applepearbananaorangepineapplelemon", Exercise1.toSingleString());
     }
 }

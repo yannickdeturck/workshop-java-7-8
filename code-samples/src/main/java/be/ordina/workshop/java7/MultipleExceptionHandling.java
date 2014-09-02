@@ -2,6 +2,9 @@ package be.ordina.workshop.java7;
 
 import java.util.Random;
 
+/**
+ * @author Yannick De Turck
+ */
 public class MultipleExceptionHandling {
 
     public static void main(String[] args) throws NoSuchFieldException {

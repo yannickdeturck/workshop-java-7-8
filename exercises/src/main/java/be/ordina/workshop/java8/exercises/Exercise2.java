@@ -4,6 +4,8 @@ import be.ordina.workshop.java8.exercises.tweeter.service.TweetService;
 
 /**
  * Exercises on Java 7 syntax.
+ *
+ * @author Ken Coenen
  */
 public class Exercise2 {
 	private static TweetService tweetService = TweetService.getInstance();
