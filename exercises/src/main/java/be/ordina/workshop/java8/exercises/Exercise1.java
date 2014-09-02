@@ -10,13 +10,10 @@ import java.util.List;
 public class Exercise1 {
     private static List<String> fruits = Arrays.asList("apple", "pear", "banana", "orange", "pineapple", "lemon");
 
-    public static void main(String[] args) {
-    }
-
-    // TODO implement this method using streams to filter out all fruits with an uneven character size
-    public static List<String> filterEvenCharacterSize() {
-        return new ArrayList<>();
-    }
+	// TODO implement this method using streams to filter out all fruits with an uneven character size
+	public static List<String> filterEvenCharacterSize() {
+		return new ArrayList<>();
+	}
 
     // TODO implement this method using streams to sort the list alphabetically
     public static List<String> sortAlphabetically() {
