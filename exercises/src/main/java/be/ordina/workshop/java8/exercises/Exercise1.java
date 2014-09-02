@@ -40,7 +40,7 @@ public class Exercise1 {
                 .anyMatch(f -> f.length() == size);
     }
 
-    // TODO implement this method using the new forEach-method available to all Collections to join all fruits in a single String
+    // TODO implement this method using the new forEach-method available to all Collections to join all fruits in a single String utilising a StringBuilder
     public static String toSingleString() {
         StringBuilder bob = new StringBuilder();
         fruits.forEach(bob::append);
