@@ -49,11 +49,12 @@ public class TweetFileReader extends TweetReader {
 				}
 			}
 		}
-		return null;
+		return tweetCache;
 	}
 
 	public static void main(String[] args) {
-		TweetReader reader = new TweetFileReader();
-		reader.read();
+        TweetReader reader = new TweetFileReader();
+        reader.read().stream()
+                .forEach(System.out::println);
 	}
 }

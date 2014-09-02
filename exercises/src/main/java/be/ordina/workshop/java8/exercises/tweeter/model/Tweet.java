@@ -79,4 +79,17 @@ public class Tweet {
     public void setFavourites(Integer favourites) {
         this.favourites = favourites;
     }
+
+    @Override
+    public String toString() {
+        return "Tweet{" +
+                "tweetId=" + tweetId +
+                ", username='" + username + '\'' +
+                ", name='" + name + '\'' +
+                ", text='" + text + '\'' +
+                ", creationDateTime=" + creationDateTime +
+                ", retweets=" + retweets +
+                ", favourites=" + favourites +
+                '}';
+    }
 }
