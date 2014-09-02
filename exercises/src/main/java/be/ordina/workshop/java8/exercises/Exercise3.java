@@ -9,6 +9,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * Exercises based on Lambdas, Streams and the TweetService.
@@ -39,7 +40,7 @@ public class Exercise3 {
 
     // TODO Implement this method using streams to lookup the Tweet with the highest retweetamount
     // for a given username.
-    public static Tweet getTopTweet(String username) {
+    public static Optional<Tweet> getTopTweet(String username) {
         return null;
     }
 

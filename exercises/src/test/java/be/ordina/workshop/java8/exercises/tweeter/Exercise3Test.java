@@ -48,14 +48,17 @@ public class Exercise3Test {
 
     @Test
     public void testGetTopTweet() {
-        Assert.assertEquals("This is a video of me being ice bucketed. @MrJamesMay @RichardHammond You're next. youtu.be/CU6pB7s7rtg", Exercise3.getTopTweet("@JeremyClarkson").getText());
-        Assert.assertEquals("Apple's September 9th event is official. iPhone 6 and iWatch expected theverge.com/e/5842842 pic.twitter.com/7xosFMPwhJ", Exercise3.getTopTweet("@verge").getText());
-        Assert.assertEquals("Oculus Rift gestuurde 3D webcam opstelling. #Ordina #ordinabelgium #innovation #oculus instagram.com/p/sPdEjjLwkK/", Exercise3.getTopTweet("@Mr_Jean").getText());
+        Assert.assertEquals("This is a video of me being ice bucketed. @MrJamesMay @RichardHammond You're next. youtu.be/CU6pB7s7rtg",
+                Exercise3.getTopTweet("@JeremyClarkson").get().getText());
+        Assert.assertEquals("Apple's September 9th event is official. iPhone 6 and iWatch expected theverge.com/e/5842842 pic.twitter.com/7xosFMPwhJ",
+                Exercise3.getTopTweet("@verge").get().getText());
+        Assert.assertEquals("Oculus Rift gestuurde 3D webcam opstelling. #Ordina #ordinabelgium #innovation #oculus instagram.com/p/sPdEjjLwkK/",
+                Exercise3.getTopTweet("@Mr_Jean").get().getText());
     }
 
     @Test
     public void testGetSortedTweets() {
-        List<Tweet> sortedTweets = Exercise3.getSortedTweets((t1, t2) -> t1.getTweetId().compareTo(t2.getTweetId()));
+        List<Tweet> sortedTweets = Exercise3.getSortedTweets((t1, t2) -> t1.getTweetId().compareTo(t2.getTweetId()) * -1);
         Assert.assertEquals(11L, sortedTweets.get(0).getTweetId().longValue());
         Assert.assertEquals(10L, sortedTweets.get(1).getTweetId().longValue());
         Assert.assertEquals(9L, sortedTweets.get(2).getTweetId().longValue());
