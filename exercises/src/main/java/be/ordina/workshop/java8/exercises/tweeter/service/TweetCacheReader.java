@@ -18,7 +18,7 @@ public class TweetCacheReader extends TweetReader {
 	List<Tweet> read() {
 		List<Tweet> tweetCache = new ArrayList<>();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
-		tweetCache.add(new Tweet(1L, "@JeremyClarkson", "Jeremy Clarkson", "Argument with children: who is more famous; Nicki Minaj or Rick Wakeman?", LocalDateTime.parse("26/08/2014 18:06", formatter), 418, 1048));
+		tweetCache.add(new Tweet(1L, "@JeremyClarkson", "Jeremy Clarkson", "Argument with children: who is more famous, Nicki Minaj or Rick Wakeman?", LocalDateTime.parse("26/08/2014 18:06", formatter), 418, 1048));
 		tweetCache.add(new Tweet(2L, "@JeremyClarkson", "Jeremy Clarkson", "This is a video of me being ice bucketed. @MrJamesMay @RichardHammond You're next. youtu.be/CU6pB7s7rtg", LocalDateTime.parse("22/08/2014 16:59", formatter), 12466, 12780));
 		tweetCache.add(new Tweet(3L, "@verge", "The Verge", "Charlie Shrem will reportedly plead guilty to federal charges related to Bitcoin transactions theverge.com/e/5851860", LocalDateTime.parse("31/08/2014 09:51", formatter), 14, 3));
 		tweetCache.add(new Tweet(4L, "@mobilevikingsBE", "Mobile Vikings BE", "The Mobile Vikings team at #nucleuswebkartingtrophy showed with a 5th place we aren't only fast on the water.Yay! *DA pic.twitter.com/QVq2OxKDFY", LocalDateTime.parse("31/08/2014 09:37", formatter), 0, 6));

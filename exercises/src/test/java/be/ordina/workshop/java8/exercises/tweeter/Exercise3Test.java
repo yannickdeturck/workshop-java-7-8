@@ -71,7 +71,7 @@ public class Exercise3Test {
 
     @Test
     public void testGetTweetText() throws TweetNotFoundException {
-        Assert.assertEquals("Argument with children: who is more famous; Nicki Minaj or Rick Wakeman?", Exercise3.getTweetText(1L));
+        Assert.assertEquals("Argument with children: who is more famous, Nicki Minaj or Rick Wakeman?", Exercise3.getTweetText(1L));
         Assert.assertEquals("Nintendo of Europe lays off 320 people: bit.ly/1rEoK1j pic.twitter.com/XbN1N9DWtz", Exercise3.getTweetText(8L));
         try {
             Exercise3.getTweetText(23L);

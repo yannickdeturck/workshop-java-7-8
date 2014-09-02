@@ -20,7 +20,7 @@ public class TweetFileReader extends TweetReader {
 	List<Tweet> read() {
 		BufferedReader br = null;
 		String line;
-		String csvSplitBy = ",";
+		String csvSplitBy = ";";
 		List<Tweet> tweetCache = new ArrayList<>();
 
 		// TODO Change this try-block so that it uses the try-with-resources and the multicatch exceptions.
