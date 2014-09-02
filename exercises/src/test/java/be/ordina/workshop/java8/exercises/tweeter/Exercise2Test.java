@@ -4,11 +4,13 @@ import be.ordina.workshop.java8.exercises.Exercise2;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Map;
+
 public class Exercise2Test {
 	@Test
 	public void testGetTweetCount() throws Exception {
-		Assert.assertEquals(2, Exercise2.getTweetCount("@JeremyClarkson").intValue());
-		Assert.assertEquals(3, Exercise2.getTweetCount("@verge").intValue());
-		Assert.assertEquals(1, Exercise2.getTweetCount("@Kotaku").intValue());
+        Map<String,Integer> tweetCount = Exercise2.getTweetCountJeremyClarksonAndBBCTopGear();
+        Assert.assertEquals(2, tweetCount.get("@JeremyClarkson").intValue());
+		Assert.assertEquals(1, tweetCount.get("@BBC_TopGear").intValue());
 	}
 }
