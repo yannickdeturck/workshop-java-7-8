@@ -32,8 +32,10 @@ public class Exercise1 {
         return false;
     }
 
-    // TODO implement this method using the new forEach-method available to all Collections to join all fruits in a single String
+    // TODO implement this method using the new forEach-method available to all Collections to join all fruits in a single String utilising a StringBuilder
     public static String toSingleString() {
-        return "";
+        StringBuilder bob = new StringBuilder();
+        // TODO add forEach here!
+        return bob.toString();
     }
 }
