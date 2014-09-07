@@ -20,6 +20,7 @@ public class DefaultMethodExamples { // aka Extension Methods
     }
 
     static class CapsPrinter implements Printer {
+        // Note that the method can still be overridden
         @Override
         public void print(String s) {
             Printer.super.print(s.toUpperCase());

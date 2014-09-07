@@ -1,5 +1,6 @@
 package be.ordina.workshop.java8;
 
+import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -48,6 +49,7 @@ public class FunctionalInterfaceExamples {
 
         // Consumer example (takes an argument and returns nothing, eg it operates via side-effects)
         Consumer<Integer> consumer = x -> System.out.println(x);
+        Arrays.asList(1,2,3).forEach(consumer); // prints 1\n2\n3
     }
 
     @FunctionalInterface
