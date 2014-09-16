@@ -13,20 +13,20 @@ import java.util.stream.Collectors;
  * @author Ken Coenen
  */
 public class Exercise1 {
-	private static List<Food> fridgeContent = Arrays.asList(
-	  new Food("apple", Category.FRUITS, LocalDate.now().plus(Period.ofWeeks(1))),
-	  new Food("pear", Category.FRUITS, LocalDate.now().plus(Period.ofDays(5))),
-	  new Food("orange", Category.FRUITS, LocalDate.now().plus(Period.ofWeeks(1))),
-	  new Food("pineapple", Category.FRUITS, LocalDate.now().plus(Period.ofWeeks(1))),
-	  new Food("pizza", Category.FREEZER, LocalDate.now().plus(Period.ofWeeks(8))),
-	  new Food("lettuce", Category.VEGETABLES, LocalDate.now().plus(Period.ofDays(5))),
-	  new Food("carrot", Category.VEGETABLES, LocalDate.now().plus(Period.ofDays(10))),
-	  new Food("steak", Category.MEAT, LocalDate.now().plus(Period.ofDays(2))),
-	  new Food("salmon", Category.FISH, LocalDate.now().plus(Period.ofDays(4))),
-	  new Food("lasagna", Category.PREPARED_MEALS, LocalDate.now().plus(Period.ofWeeks(1))),
-	  new Food("soup", Category.PREPARED_MEALS, LocalDate.now().plus(Period.ofWeeks(1))),
-	  new Food("frozen soup", Category.FREEZER, LocalDate.now().plus(Period.ofWeeks(10)))
-	);
+    private static List<Food> fridgeContent = Arrays.asList(
+        new Food("apple", Category.FRUITS, LocalDate.now().plus(Period.ofWeeks(1))),
+        new Food("pear", Category.FRUITS, LocalDate.now().plus(Period.ofDays(5))),
+        new Food("orange", Category.FRUITS, LocalDate.now().plus(Period.ofWeeks(1))),
+        new Food("pineapple", Category.FRUITS, LocalDate.now().plus(Period.ofWeeks(1))),
+        new Food("pizza", Category.FREEZER, LocalDate.now().plus(Period.ofWeeks(8))),
+        new Food("lettuce", Category.VEGETABLES, LocalDate.now().plus(Period.ofDays(5))),
+        new Food("carrot", Category.VEGETABLES, LocalDate.now().plus(Period.ofDays(10))),
+        new Food("steak", Category.MEAT, LocalDate.now().plus(Period.ofDays(2))),
+        new Food("salmon", Category.FISH, LocalDate.now().plus(Period.ofDays(4))),
+        new Food("lasagna", Category.PREPARED_MEALS, LocalDate.now().plus(Period.ofWeeks(1))),
+        new Food("soup", Category.PREPARED_MEALS, LocalDate.now().plus(Period.ofWeeks(1))),
+        new Food("icecream", Category.FREEZER, LocalDate.now().plus(Period.ofWeeks(10)))
+    );
 
 	// TODO implement this method using streams to filter out all food in our fridge with an even character size
 	public static List<Food> filterEvenCharacterSize() {
