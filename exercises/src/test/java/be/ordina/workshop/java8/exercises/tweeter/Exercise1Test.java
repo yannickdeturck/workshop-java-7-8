@@ -26,7 +26,7 @@ public class Exercise1Test {
 		int i = 0;
 		Assert.assertEquals("apple", sortedFruits.get(i++).getName());
 		Assert.assertEquals("carrot", sortedFruits.get(i++).getName());
-		Assert.assertEquals("frozen soup", sortedFruits.get(i++).getName());
+		Assert.assertEquals("icecream", sortedFruits.get(i++).getName());
 		Assert.assertEquals("lasagna", sortedFruits.get(i++).getName());
 		Assert.assertEquals("lettuce", sortedFruits.get(i++).getName());
 		Assert.assertEquals("orange", sortedFruits.get(i++).getName());
@@ -53,7 +53,7 @@ public class Exercise1Test {
 		Assert.assertEquals("sal", food.get(i++));
 		Assert.assertEquals("las", food.get(i++));
 		Assert.assertEquals("sou", food.get(i++));
-		Assert.assertEquals("fro", food.get(i++));
+		Assert.assertEquals("ice", food.get(i++));
 	}
 
 	@Test
@@ -61,12 +61,12 @@ public class Exercise1Test {
 		Assert.assertTrue(Exercise1.foodWithSizeExists(5));
 		Assert.assertTrue(Exercise1.foodWithSizeExists(9));
 		Assert.assertFalse(Exercise1.foodWithSizeExists(2));
-		Assert.assertFalse(Exercise1.foodWithSizeExists(7));
+		Assert.assertFalse(Exercise1.foodWithSizeExists(10));
 	}
 
 	@Test
 	public void testToSingleString() {
-		Assert.assertEquals("applepearorangepineapplepizzalettucecarrotsteaksalmonlasagnasoupfrozen soup", Exercise1.toSingleString());
+		Assert.assertEquals("applepearorangepineapplepizzalettucecarrotsteaksalmonlasagnasoupicecream", Exercise1.toSingleString());
 	}
 
 	@Test
