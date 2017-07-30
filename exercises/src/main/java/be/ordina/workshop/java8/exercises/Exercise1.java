@@ -42,20 +42,20 @@ public class Exercise1 {
 		  .collect(Collectors.toList());
 	}
 
-	// TODO implement this method using streams to return a list of food names from our fridge where each name is limited to its 3 first characters
+	// TODO implement this method using streams to return a list of food names from our fridge where each name is limited to its first three characters
 	public static List<String> mapThreeFirstCharacters() {
 		return fridgeContent.stream()
 		  .map(f -> f.getName().substring(0, 3))
 		  .collect(Collectors.toList());
 	}
 
-	// TODO implement this method using streams and return a boolean reflecting whether a food name's size matches with the given size
+	// TODO implement this method using streams and return a boolean reflecting whether a food name's length matches with the given size
 	public static boolean foodWithSizeExists(int size) {
 		return fridgeContent.stream()
 		  .anyMatch(f -> f.getName().length() == size);
 	}
 
-	// TODO implement this method using the new forEach-method available to all Collections to join all food in our fridge in a single String utilising a StringBuilder
+	// TODO implement this method using the new forEach method available to all Collections to join all food in our fridge in a single String utilising a StringBuilder
 	public static String toSingleString() {
 		StringBuilder bob = new StringBuilder();
 		fridgeContent.forEach(bob::append);

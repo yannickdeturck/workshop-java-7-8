@@ -23,7 +23,7 @@ public class Exercise3 {
     public static void main(String[] args) {
     }
 
-    // TODO Implement this method using streams to return a unique List of tweetusers.
+    // TODO Implement this method using streams and the tweetService to return a unique List of tweeters.
     public static List<String> getTweeters() {
         return tweetService.findTweets().stream()
                 .map(Tweet::getUsername)
@@ -31,7 +31,7 @@ public class Exercise3 {
                 .collect(Collectors.toList());
     }
 
-    // TODO Implement this method using streams to return the tweetcount for the given username
+    // TODO Implement this method using streams and the tweetService to return the tweetcount for the given username
     public static Integer getTweetCount(String username) {
         long tweetCount = tweetService.findTweets().stream()
                 .filter(t -> username.equals(t.getUsername()))
@@ -39,7 +39,7 @@ public class Exercise3 {
         return Long.valueOf(tweetCount).intValue();
     }
 
-    // TODO Implement this method using streams and getTweetCount to return a Map containing the
+    // TODO Implement this method using streams and the tweetService to return a Map containing the
     // tweetcount for each username
     public static Map<String, Integer> listUsersWithTweetCount() {
         Map<String, Integer> tweetsPerUsername = new HashMap<>();
@@ -54,7 +54,7 @@ public class Exercise3 {
         return tweetsPerUsername;
     }
 
-    // TODO Implement this method using streams to lookup the Tweet with the highest retweetamount
+    // TODO Implement this method using streams and the tweetService to lookup the Tweet with the highest amount of retweets
     // for a given username.
     public static Optional<Tweet> getTopTweet(String username) {
        return tweetService.findTweets().stream()
@@ -63,7 +63,7 @@ public class Exercise3 {
                .findFirst();
     }
 
-    // TODO Implement this method using streams to return a sorted list based on the (lambda) comparator
+    // TODO Implement this method using streams and the tweetService to return a sorted list based on the (lambda) comparator
     // passed by the caller
     public static List<Tweet> getSortedTweets(Comparator<Tweet> comparator) {
         return tweetService.findTweets().stream()
@@ -71,8 +71,8 @@ public class Exercise3 {
                 .collect(Collectors.toList());
     }
 
-    // TODO Implement this method using the TweetService.findTweet which returns an Optional<Tweet>,
-    // if a value exists return the tweettext otherwise throw a TweetNotFoundException
+    // TODO Implement this method using the tweetService.findTweet which returns an Optional<Tweet>.
+    // If a value exists then return the tweet text, otherwise throw a TweetNotFoundException
     public static String getTweetText(Long tweetId) throws TweetNotFoundException {
         return tweetService.findTweet(tweetId)
                 .orElseThrow(() -> new TweetNotFoundException(tweetId))

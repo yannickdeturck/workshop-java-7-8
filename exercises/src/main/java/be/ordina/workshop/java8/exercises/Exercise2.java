@@ -15,8 +15,8 @@ public class Exercise2 {
 	private static TweetService tweetService = TweetService.getInstance();
 
 	public static Map<String, Integer> getTweetCountJeremyClarksonAndBBCTopGear() {
-		// TODO In this exercise we want to count the amount of tweets of @JeremyClarkson and @BBC_TopGear
-		// Create a HashMap with as key the username of the tweeter and value the amount of tweets
+		// TODO In this exercise we want to count the amount of tweets of @JeremyClarkson and @BBC_TopGear.
+		// Create a HashMap with as key, the username of the tweeter, and as value, the amount of tweets.
         // Be sure to utilise the diamond operator when initialising the HashMap and use a switch statement on the
         // username while iterating over the tweets.
         Map<String, Integer> tweetsPerUser = new HashMap<>();
