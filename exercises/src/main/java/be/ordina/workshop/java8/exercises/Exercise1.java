@@ -3,6 +3,7 @@ package be.ordina.workshop.java8.exercises;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -38,7 +39,7 @@ public class Exercise1 {
 	// TODO implement this method using streams to sort the list alphabetically
 	public static List<Food> sortAlphabetically() {
 		return fridgeContent.stream()
-		  .sorted((f1, f2) -> f1.getName().compareTo(f2.getName()))
+		  .sorted(Comparator.comparing(Food::getName))
 		  .collect(Collectors.toList());
 	}
 

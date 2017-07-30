@@ -43,7 +43,7 @@ public class Exercise3 {
     // tweetcount for each username
     public static Map<String, Integer> listUsersWithTweetCount() {
         Map<String, Integer> tweetsPerUsername = new HashMap<>();
-        tweetService.findTweets().stream()
+        tweetService.findTweets()
                 .forEach( t -> {
                     if (tweetsPerUsername.containsKey(t.getUsername())){
                         tweetsPerUsername.put(t.getUsername(), tweetsPerUsername.get(t.getUsername())+1);
