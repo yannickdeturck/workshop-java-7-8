@@ -25,7 +25,7 @@ public class Find extends SimpleFileVisitor<Path> { // Also check interface File
      */
     @Override
     public FileVisitResult preVisitDirectory(final Path dir, final BasicFileAttributes attrs) {
-        if (".svn".equals(dir.getFileName().toString())) {
+        if (".git".equals(dir.getFileName().toString())) {
             return FileVisitResult.SKIP_SUBTREE;
         }
         System.out.println("Directory found: " + dir);
