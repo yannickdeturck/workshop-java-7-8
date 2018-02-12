@@ -29,8 +29,8 @@ public class Exercise1 {
         new Food("icecream", Category.FREEZER, LocalDate.now().plus(Period.ofWeeks(10)))
     );
 
-	// TODO implement this method using streams to filter out all food in our fridge with an even character size
-	public static List<Food> filterEvenCharacterSize() {
+	// TODO implement this method using streams to filter the food in our fridge on having an even character size
+	public static List<Food> filterOnEvenCharacterSize() {
 		return fridgeContent.stream()
 		  .filter(f -> f.getName().length() % 2 == 0)
 		  .collect(Collectors.toList());
@@ -43,27 +43,27 @@ public class Exercise1 {
 		  .collect(Collectors.toList());
 	}
 
-	// TODO implement this method using streams to return a list of food names from our fridge where each name is limited to its first three characters
-	public static List<String> mapThreeFirstCharacters() {
+	// TODO implement this method using streams to return a list of food items from our fridge where each item is limited to its first three characters
+	public static List<String> mapToFirstThreeCharacters() {
 		return fridgeContent.stream()
 		  .map(f -> f.getName().substring(0, 3))
 		  .collect(Collectors.toList());
 	}
 
-	// TODO implement this method using streams and return a boolean reflecting whether a food name's length matches with the given size
-	public static boolean foodWithSizeExists(int size) {
+	// TODO implement this method using streams and return a boolean reflecting whether a food item with the given length exists
+	public static boolean foodWithLengthExists(int size) {
 		return fridgeContent.stream()
 		  .anyMatch(f -> f.getName().length() == size);
 	}
 
-	// TODO implement this method using the new forEach method available to all Collections to join all food in our fridge in a single String utilising a StringBuilder
+	// TODO implement this method using the new forEach method available to all Collections to join the food in our fridge in a single String utilising a StringBuilder
 	public static String toSingleString() {
 		StringBuilder bob = new StringBuilder();
 		fridgeContent.forEach(bob::append);
 		return bob.toString();
 	}
 
-	// TODO implement this method using streams and the new DateTime API to return all expired food after the given day
+	// TODO implement this method using streams and the new DateTime API to return all expired food based on the given day
 	public static List<Food> getExpiredFood(int day) {
 		return fridgeContent.stream()
 		  .filter(f -> LocalDate.now().plus(Period.ofDays(day)).isAfter(f.getExpirationDate()))

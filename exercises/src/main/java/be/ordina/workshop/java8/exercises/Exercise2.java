@@ -2,41 +2,79 @@ package be.ordina.workshop.java8.exercises;
 
 import be.ordina.workshop.java8.exercises.tweeter.model.Tweet;
 import be.ordina.workshop.java8.exercises.tweeter.service.TweetService;
+import be.ordina.workshop.java8.exercises.tweeter.util.TweetNotFoundException;
 
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
- * Exercises on Java 7 syntax.
+ * More advanced exercises based on Lambdas, Streams and the TweetService.
  *
- * @author Ken Coenen
+ * @author Yannick De Turck
  */
 public class Exercise2 {
-	private static TweetService tweetService = TweetService.getInstance();
+    private static TweetService tweetService = TweetService.getInstance();
 
-	public static Map<String, Integer> getTweetCountJeremyClarksonAndBBCTopGear() {
-		// TODO In this exercise we want to count the amount of tweets of @JeremyClarkson and @BBC_TopGear.
-		// Create a HashMap with as key, the username of the tweeter, and as value, the amount of tweets.
-        // Be sure to utilise the diamond operator when initialising the HashMap and use a switch statement on the
-        // username while iterating over the tweets.
-        Map<String, Integer> tweetsPerUser = new HashMap<>();
-        for (Tweet tweet : tweetService.findTweets()) {
-            String usernameToIncrement;
-            switch (tweet.getUsername()){
-                case "@JeremyClarkson":
-                    usernameToIncrement = "@JeremyClarkson";
-                    break;
-                case "@BBC_TopGear":
-                    usernameToIncrement = "@BBC_TopGear";
-                    break;
-                default: continue;
-            }
-            if (tweetsPerUser.containsKey(usernameToIncrement)){
-                tweetsPerUser.put(usernameToIncrement, tweetsPerUser.get(usernameToIncrement)+1);
-            } else {
-                tweetsPerUser.put(usernameToIncrement, 1);
-            }
-        }
-        return tweetsPerUser;
-	}
+    public static void main(String[] args) {
+    }
+
+    // TODO Implement this method using streams and the tweetService to return a unique List of tweeters.
+    public static List<String> getTweeters() {
+        return tweetService.findTweets().stream()
+                .map(Tweet::getUsername)
+                .distinct()
+                .collect(Collectors.toList());
+    }
+
+    // TODO Implement this method using streams and the tweetService to return the tweetcount for the given username
+    public static Integer getTweetCount(String username) {
+        long tweetCount = tweetService.findTweets().stream()
+                .filter(t -> username.equals(t.getUsername()))
+                .count();
+        return Long.valueOf(tweetCount).intValue();
+    }
+
+    // TODO Implement this method using streams and the tweetService to return a Map containing the
+    // tweetcount for each username
+    public static Map<String, Integer> listUsersWithTweetCount() {
+        Map<String, Integer> tweetsPerUsername = new HashMap<>();
+        tweetService.findTweets()
+                .forEach( t -> {
+                    if (tweetsPerUsername.containsKey(t.getUsername())){
+                        tweetsPerUsername.put(t.getUsername(), tweetsPerUsername.get(t.getUsername())+1);
+                    } else {
+                        tweetsPerUsername.put(t.getUsername(), 1);
+                    }
+                });
+        return tweetsPerUsername;
+    }
+
+    // TODO Implement this method using streams and the tweetService to lookup the Tweet with the highest amount of retweets
+    // for a given username.
+    public static Optional<Tweet> getTopTweet(String username) {
+        return tweetService.findTweets().stream()
+                .filter(t -> username.equals(t.getUsername()))
+                .sorted((t1, t2) -> t1.getRetweets().compareTo(t2.getRetweets()) * -1)
+                .findFirst();
+    }
+
+    // TODO Implement this method using streams and the tweetService to return a sorted list based on the (lambda) comparator
+    // passed by the caller
+    public static List<Tweet> getSortedTweets(Comparator<Tweet> comparator) {
+        return tweetService.findTweets().stream()
+                .sorted(comparator)
+                .collect(Collectors.toList());
+    }
+
+    // TODO Implement this method using the tweetService.findTweet which returns an Optional<Tweet>.
+    // If a value exists then return the tweet text, otherwise throw a TweetNotFoundException
+    public static String getTweetText(Long tweetId) throws TweetNotFoundException {
+        return tweetService.findTweet(tweetId)
+                .orElseThrow(() -> new TweetNotFoundException(tweetId))
+                .getText();
+    }
 }
