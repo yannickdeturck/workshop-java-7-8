@@ -15,8 +15,8 @@ import java.util.List;
 @RunWith(JUnit4.class)
 public class Exercise1Test {
     @Test
-    public void testFilterEvenCharacterSize() {
-        List<Exercise1.Food> evenFood = Exercise1.filterEvenCharacterSize();
+    public void testFilterOnEvenCharacterSize() {
+        List<Exercise1.Food> evenFood = Exercise1.filterOnEvenCharacterSize();
         Assert.assertEquals(6, evenFood.size());
     }
 
@@ -39,8 +39,8 @@ public class Exercise1Test {
     }
 
     @Test
-    public void testMapThreeFirstCharacters() {
-        List<String> food = Exercise1.mapThreeFirstCharacters();
+    public void testMapToFirstThreeCharacters() {
+        List<String> food = Exercise1.mapToFirstThreeCharacters();
         int i = 0;
         Assert.assertEquals("app", food.get(i++));
         Assert.assertEquals("pea", food.get(i++));
@@ -57,11 +57,11 @@ public class Exercise1Test {
     }
 
     @Test
-    public void testFruitWithSizeExists() {
-        Assert.assertTrue(Exercise1.foodWithSizeExists(5));
-        Assert.assertTrue(Exercise1.foodWithSizeExists(9));
-        Assert.assertFalse(Exercise1.foodWithSizeExists(2));
-        Assert.assertFalse(Exercise1.foodWithSizeExists(10));
+    public void testFruitWithLengthExists() {
+        Assert.assertTrue(Exercise1.foodWithLengthExists(5));
+        Assert.assertTrue(Exercise1.foodWithLengthExists(9));
+        Assert.assertFalse(Exercise1.foodWithLengthExists(2));
+        Assert.assertFalse(Exercise1.foodWithLengthExists(10));
     }
 
     @Test
